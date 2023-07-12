@@ -5,6 +5,7 @@ public class Character {
     private int healthPoints;
     private int strengh;
     private String type;
+//    private String equipment;
 
     public Character() {
     }
