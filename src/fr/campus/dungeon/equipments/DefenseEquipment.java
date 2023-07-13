@@ -34,4 +34,13 @@ public class DefenseEquipment {
     public void setEquipmentName(String equipmentName) {
         this.equipmentName = equipmentName;
     }
+
+    @Override
+    public String toString() {
+        return "DefenseEquipment{\n" +
+                "equipmentType='" + equipmentType + '\'' +
+                ",\n defenseLevel=" + defenseLevel +
+                ",\n equipmentName='" + equipmentName + '\'' +
+                '}';
+    }
 }
