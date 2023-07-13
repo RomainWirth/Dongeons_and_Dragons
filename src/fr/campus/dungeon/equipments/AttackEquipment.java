@@ -5,8 +5,10 @@ public class AttackEquipment {
     private int attackLevel;
     private String equipmentName;
 
-    public AttackEquipment() {
-
+    public AttackEquipment(String equipmentType, int attackLevel, String equipmentName) {
+        this.equipmentType = equipmentType;
+        this.attackLevel = attackLevel;
+        this.equipmentName = equipmentName;
     }
 
     public String getEquipmentType() {

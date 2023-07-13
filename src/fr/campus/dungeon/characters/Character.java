@@ -1,11 +1,12 @@
 package fr.campus.dungeon.characters;
 
+import fr.campus.dungeon.equipments.AttackEquipment;
+
 public class Character {
     private String name;
     private int healthPoints;
     private int strengh;
     private String type;
-//    private String equipment;
 
     public Character() {
     }
@@ -20,9 +21,11 @@ public class Character {
         if(this.type.equals("Warrior")) {
             this.healthPoints = 10;
             this.strengh = 10;
+            AttackEquipment AttackEquipment = new AttackEquipment("Weapon", 10, "Narzil");
         } else {
             this.healthPoints = 6;
             this.strengh = 15;
+            AttackEquipment AttackEquipment = new AttackEquipment("Spell", 8, "Fire Breather");
         }
     }
 
