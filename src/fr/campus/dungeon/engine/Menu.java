@@ -18,6 +18,12 @@ public class Menu {
         return userInput.nextLine();
     }
 
+    // display Game Menu
+    public String displayGameMenu(){
+        System.out.println("What do you wish to do ?\n 1 - Roll the dice\n 2 - look at my character\n 3 - quit game");
+        return userInput.nextLine();
+    }
+
     // Créer un personnage
     public Character createCharacter() {
 
@@ -58,5 +64,7 @@ public class Menu {
     // Quitter la partie
     public void quitGame() {
         System.out.println("Game over, thanks for playing!");
+        // Start new game ?
+        // si oui = display Main menu, si non = fin
     }
 }

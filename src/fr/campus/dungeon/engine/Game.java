@@ -41,12 +41,16 @@ public class Game {
         System.out.println(this.characterPosition);
         // choix : lancer le dé ou quitter la partie;
         while(this.characterPosition <= this.board.getBoard().length) {
+            // générer un menu utilisateur avec 3 choix
+            // récupérer le choix de l'utilisateur : 1 = continuer la partie => roll dice ; 2 = show Character ; 3 = quit game
+            menu.displayGameMenu();
+
             // si position < taille tableau - 6
             int roll = Dice.roll();
             System.out.println("you rolled : " + roll);
             this.characterPosition = this.characterPosition + roll;
             System.out.println(this.characterPosition);
         }
+        menu.quitGame();
     }
-
 }
