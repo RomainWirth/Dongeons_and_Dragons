@@ -22,7 +22,7 @@ public class Character {
     public Character(String name, String type) {
         this.name = name;
         this.type = type;
-        if(this.type.equals("Warrior")) {
+        if(this.type.equals("1")) { // 1 = Warrior
             this.healthPoints = 10;
             this.strengh = 10;
             this.attackEquipment = new AttackEquipment("Weapon", 10, "Narzil");
@@ -40,6 +40,7 @@ public class Character {
     }
 
     public void setName(String name) {
+        System.out.println("Modify you name");
         this.name = name;
     }
 
@@ -56,6 +57,7 @@ public class Character {
     }
 
     public void setStrengh(int strengh) {
+
         this.strengh = strengh;
     }
 
@@ -64,18 +66,19 @@ public class Character {
     }
 
     public void setType(String type) {
+
         this.type = type;
     }
 
     @Override
     public String toString() {
-        return "Character{\n" +
-                "name='" + name + '\'' +
-                ",\n healthPoints=" + healthPoints +
-                ",\n strengh=" + strengh +
-                ",\n type='" + type + '\'' +
-                ",\n attackEquipment=" + attackEquipment +
-                ",\n defenseEquipment=" + defenseEquipment +
+        return "Character { \n" +
+                " name = '" + name + '\'' +
+                ",\n healthPoints = " + healthPoints +
+                ",\n strengh = " + strengh +
+                ",\n type = '" + type + '\'' +
+                ",\n attackEquipment = " + attackEquipment +
+                ",\n defenseEquipment = " + defenseEquipment +
                 '}';
     }
 }

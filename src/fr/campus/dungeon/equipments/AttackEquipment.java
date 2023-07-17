@@ -42,10 +42,10 @@ public class AttackEquipment {
 
     @Override
     public String toString() {
-        return "AttackEquipment{\n" +
-                "equipmentType='" + equipmentType + '\'' +
-                ",\n attackLevel=" + attackLevel +
-                ",\n equipmentName='" + equipmentName + '\'' +
+        return "{\n" +
+                " equipmentType = '" + equipmentType + '\'' +
+                ",\n attackLevel = " + attackLevel +
+                ",\n equipmentName = '" + equipmentName + '\'' +
                 '}';
     }
 }
