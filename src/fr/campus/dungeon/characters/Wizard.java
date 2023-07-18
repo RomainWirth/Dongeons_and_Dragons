@@ -10,8 +10,8 @@ public class Wizard extends Character{
     // Constructeurs
     public Wizard (String name) {
         super(name);
-        this.attackEquipment = new Spell("Spell", 1);
-        this.defenseEquipment = new Potion("Potion", 1);
+//        this.attackEquipment = new Spell("Spell", 1);
+//        this.defenseEquipment = new Potion("Potion", 1);
     }
 
     // Méthodes

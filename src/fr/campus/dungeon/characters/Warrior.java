@@ -2,7 +2,7 @@ package fr.campus.dungeon.characters;
 
 import java.util.Random;
 
-import fr.campus.dungeon.equipments.Shield;
+import fr.campus.dungeon.equipments.WoodenShield;
 import fr.campus.dungeon.equipments.Sword;
 import fr.campus.dungeon.equipments.DefenseEquipment;
 
@@ -15,7 +15,7 @@ public class Warrior extends Character {
     public Warrior (String name) {
         super(name);
         this.attackEquipment = new Sword("Sword", 2);
-        this.defenseEquipment = new Shield("Shield", 5);
+        this.defenseEquipment = new WoodenShield("Shield", 5);
     }
 
     // Méthodes
