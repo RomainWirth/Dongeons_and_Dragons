@@ -1,14 +1,18 @@
 package fr.campus.dungeon.equipments;
 
-public class DefenseEquipment {
+public abstract class DefenseEquipment {
     private String equipmentType; // Shield || Potion
     private int defenseLevel;
-    private String equipmentName;
+//    private String equipmentName;
 
-    public DefenseEquipment(String equipmentType, int defenseLevel, String equipmentName) {
+    public DefenseEquipment(
+            String equipmentType,
+            int defenseLevel
+//            String equipmentName
+    ) {
         this.equipmentType = equipmentType;
         this.defenseLevel = defenseLevel;
-        this.equipmentName = equipmentName;
+//        this.equipmentName = equipmentName;
     }
 
     public String getEquipmentType() {
@@ -27,20 +31,18 @@ public class DefenseEquipment {
         this.defenseLevel = defenseLevel;
     }
 
-    public String getEquipmentName() {
-        return equipmentName;
-    }
-
-    public void setEquipmentName(String equipmentName) {
-        this.equipmentName = equipmentName;
-    }
+//    public String getEquipmentName() {
+//        return equipmentName;
+//    }
+//
+//    public void setEquipmentName(String equipmentName) {this.equipmentName = equipmentName;}
 
     @Override
     public String toString() {
         return "{\n" +
                 " equipmentType = '" + equipmentType + '\'' +
                 ",\n defenseLevel = " + defenseLevel +
-                ",\n equipmentName = '" + equipmentName + '\'' +
+//                ",\n equipmentName = '" + equipmentName + '\'' +
                 '}';
     }
 }

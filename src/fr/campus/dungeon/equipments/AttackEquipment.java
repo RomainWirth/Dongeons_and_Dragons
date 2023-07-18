@@ -1,19 +1,19 @@
 package fr.campus.dungeon.equipments;
 
-public class AttackEquipment {
-    // Attributs (propriétés) de la classe équipement offensif
-    // type d'équipement, qui va varier selon le type de personnage créé : Warrior ou Wizard
-    private String equipmentType; // weapon || spell
-    // points d'attaque
-    private int attackLevel;
-    // nom de l'équipement
-    private String equipmentName;
+public abstract class AttackEquipment {
+    protected String equipmentType;
+    protected int attackLevel;
+//    protected String equipmentName;
 
     // constructeur 
-    public AttackEquipment(String equipmentType, int attackLevel, String equipmentName) {
+    public AttackEquipment(
+            String equipmentType,
+            int attackLevel
+//            String equipmentName
+    ) {
         this.equipmentType = equipmentType;
         this.attackLevel = attackLevel;
-        this.equipmentName = equipmentName;
+//        this.equipmentName = equipmentName;
     }
 
     public String getEquipmentType() {
@@ -32,20 +32,20 @@ public class AttackEquipment {
         this.attackLevel = attackLevel;
     }
 
-    public String getEquipmentName() {
-        return equipmentName;
-    }
-
-    public void setEquipmentName(String equipmentName) {
-        this.equipmentName = equipmentName;
-    }
+//    public String getEquipmentName() {
+//        return equipmentName;
+//    }
+//
+//    public void setEquipmentName(String equipmentName) {
+//        this.equipmentName = equipmentName;
+//    }
 
     @Override
     public String toString() {
         return "{\n" +
                 " equipmentType = '" + equipmentType + '\'' +
                 ",\n attackLevel = " + attackLevel +
-                ",\n equipmentName = '" + equipmentName + '\'' +
+//                ",\n equipmentName = '" + equipmentName + '\'' +
                 '}';
     }
 }

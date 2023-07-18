@@ -3,36 +3,29 @@ package fr.campus.dungeon.characters;
 import fr.campus.dungeon.equipments.AttackEquipment;
 import fr.campus.dungeon.equipments.DefenseEquipment;
 
-public class Character {
-    private String name;
-    private int healthPoints;
-    private int strengh;
-    private String type;
-    private AttackEquipment attackEquipment;
-    private DefenseEquipment defenseEquipment;
+public abstract class Character {
+    protected String name;
+    protected int healthPoints;
+    protected int strength;
+    protected AttackEquipment attackEquipment;
+    protected DefenseEquipment defenseEquipment;
 
     public Character() {
     }
 
     public Character(String name) {
         this.name = name;
+        defineHealthPoints();
+        defineStrength();
     }
 
     // constructeur de la classe personnage
-    public Character(String name, String type) {
+    public Character(String name, int healthPoints, int strength, AttackEquipment attackEquipment, DefenseEquipment defenseEquipment) {
         this.name = name;
-        this.type = type;
-        if(this.type.equals("Warrior")) { // 1 = Warrior
-            this.healthPoints = 10;
-            this.strengh = 10;
-            this.attackEquipment = new AttackEquipment("Weapon", 10, "Narzil");
-            this.defenseEquipment = new DefenseEquipment("Shield", 15, "Mighty Shield");
-        } else {
-            this.healthPoints = 6;
-            this.strengh = 15;
-            this.attackEquipment = new AttackEquipment("Spell", 8, "Fire Breather");
-            this.defenseEquipment = new DefenseEquipment("Potion", 5, "Health Potion");
-        }
+        this.healthPoints = healthPoints;
+        this.strength = strength;
+        this.attackEquipment = attackEquipment;
+        this.defenseEquipment = defenseEquipment;
     }
 
     public String getName() {
@@ -50,31 +43,21 @@ public class Character {
 
     public void setHealthPoints(int healthPoints) {this.healthPoints = healthPoints;}
 
-    public int getStrengh() {
-        return strengh;
+    public int getStrength() {
+        return strength;
     }
 
-    public void setStrengh(int strengh) {
+    public void setStrength(int strength) {this.strength = strength;}
 
-        this.strengh = strengh;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-
-        this.type = type;
-    }
+    public abstract void defineHealthPoints();
+    public abstract void defineStrength();
 
     @Override
     public String toString() {
         return "Character { \n" +
                 " name = '" + name + '\'' +
                 ",\n healthPoints = " + healthPoints +
-                ",\n strengh = " + strengh +
-                ",\n type = '" + type + '\'' +
+                ",\n strengh = " + strength +
                 ",\n attackEquipment = " + attackEquipment +
                 ",\n defenseEquipment = " + defenseEquipment +
                 '}';
