@@ -1,8 +1,8 @@
 package fr.campus.dungeon.characters;
 
 import java.util.Random;
-import fr.campus.dungeon.equipments.AttackEquipment;
-import fr.campus.dungeon.equipments.DefenseEquipment;
+import fr.campus.dungeon.equipments.Spell;
+import fr.campus.dungeon.equipments.Potion;
 
 public class Wizard extends Character{
     private Random random;
