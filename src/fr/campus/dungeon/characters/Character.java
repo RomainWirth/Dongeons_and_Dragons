@@ -22,7 +22,7 @@ public class Character {
     public Character(String name, String type) {
         this.name = name;
         this.type = type;
-        if(this.type.equals("1")) { // 1 = Warrior
+        if(this.type.equals("Warrior")) { // 1 = Warrior
             this.healthPoints = 10;
             this.strengh = 10;
             this.attackEquipment = new AttackEquipment("Weapon", 10, "Narzil");
@@ -48,9 +48,7 @@ public class Character {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
-    }
+    public void setHealthPoints(int healthPoints) {this.healthPoints = healthPoints;}
 
     public int getStrengh() {
         return strengh;
