@@ -18,11 +18,11 @@ public class Wizard extends Character{
     // Méthodes
     public void defineHealthPoints() {
         random = new Random();
-        this.healthPoints = random.nextInt(6) + 3;
+        this.healthPoints = random.nextInt(3) + 3;
     }
     public void defineStrength() {
         random = new Random();
-        this.strength = random.nextInt(15) + 8;
+        this.strength = random.nextInt(7) + 8;
     }
 
     @Override

@@ -19,11 +19,11 @@ public class Warrior extends Character {
     // Méthodes
     public void defineHealthPoints() {
         random = new Random();
-        this.healthPoints = random.nextInt(10) + 5;
+        this.healthPoints = random.nextInt(5) + 5;
     }
     public void defineStrength() {
         random = new Random();
-        this.strength = random.nextInt(10) + 5;
+        this.strength = random.nextInt(5) + 5;
     }
 
     @Override
