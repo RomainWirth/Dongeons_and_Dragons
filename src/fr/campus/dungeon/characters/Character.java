@@ -1,7 +1,7 @@
 package fr.campus.dungeon.characters;
 
-import fr.campus.dungeon.equipments.AttackEquipment;
-import fr.campus.dungeon.equipments.DefenseEquipment;
+import fr.campus.dungeon.equipments.offense.AttackEquipment;
+import fr.campus.dungeon.equipments.defense.DefenseEquipment;
 
 public abstract class Character {
     protected String name;

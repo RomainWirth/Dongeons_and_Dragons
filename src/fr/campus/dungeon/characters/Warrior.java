@@ -2,20 +2,18 @@ package fr.campus.dungeon.characters;
 
 import java.util.Random;
 
-import fr.campus.dungeon.equipments.WoodenShield;
-import fr.campus.dungeon.equipments.Sword;
-import fr.campus.dungeon.equipments.DefenseEquipment;
+import fr.campus.dungeon.equipments.defense.shields.WoodenShield;
+import fr.campus.dungeon.equipments.offense.weapons.RustySword;
 
 public class Warrior extends Character {
     // Attributs
-    // name inherit from Character
     private Random random;
 
     // Constructeurs
     public Warrior (String name) {
         super(name);
-        this.attackEquipment = new Sword("Sword", 2);
-        this.defenseEquipment = new WoodenShield("Shield", 5);
+        this.attackEquipment = new RustySword();
+        this.defenseEquipment = new WoodenShield();
     }
 
     // Méthodes

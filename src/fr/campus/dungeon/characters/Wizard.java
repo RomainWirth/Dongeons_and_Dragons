@@ -1,8 +1,9 @@
 package fr.campus.dungeon.characters;
 
 import java.util.Random;
-import fr.campus.dungeon.equipments.Spell;
-import fr.campus.dungeon.equipments.Potion;
+
+import fr.campus.dungeon.equipments.offense.spells.RainOfThorns;
+import fr.campus.dungeon.equipments.defense.magicRobes.ApprenticeRobe;
 
 public class Wizard extends Character{
     private Random random;
@@ -10,8 +11,8 @@ public class Wizard extends Character{
     // Constructeurs
     public Wizard (String name) {
         super(name);
-//        this.attackEquipment = new Spell("Spell", 1);
-//        this.defenseEquipment = new Potion("Potion", 1);
+        this.attackEquipment = new RainOfThorns();
+        this.defenseEquipment = new ApprenticeRobe();
     }
 
     // Méthodes
