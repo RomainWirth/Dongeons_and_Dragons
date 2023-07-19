@@ -28,12 +28,12 @@ public class Warrior extends Character {
 
     @Override
     public String toString() {
-        return "Warrior{" +
-                "name='" + name + '\'' +
-                ", healthPoints=" + healthPoints +
-                ", strength=" + strength +
-                ", attackEquipment=" + attackEquipment +
-                ", defenseEquipment=" + defenseEquipment +
+        return "Warrior {" +
+                "\n name = '" + name + '\'' +
+                ",\n healthPoints = " + healthPoints +
+                ",\n strength = " + strength +
+                ",\n attackEquipment = " + attackEquipment +
+                ",\n defenseEquipment = " + defenseEquipment +
                 '}';
     }
 }

@@ -1,6 +1,8 @@
 package fr.campus.dungeon.engine;
 
 import fr.campus.dungeon.characters.Character;
+import fr.campus.dungeon.characters.Warrior;
+import fr.campus.dungeon.characters.Wizard;
 import fr.campus.dungeon.boards.BoardGame;
 
 import java.util.Scanner;
@@ -28,18 +30,22 @@ public class Menu {
         System.out.println("Enter character type :\n Warrior\n or\n Wizard");
         String characterType = userInput.nextLine();
         if (characterType.equals("Warrior")){
-            System.out.println("You chose class : " + characterType);
+            System.out.println("You chose class : Warrior");
+            System.out.println("Enter your character name");
+            String characterName = userInput.nextLine();
+            System.out.println("Your character name is : " + characterName);
+            Warrior warrior = new Warrior(characterName);
+            System.out.println(warrior.toString());
+            return warrior;
         } else {
-            System.out.println("You chose class : " + characterType);
+            System.out.println("You chose class : Wizard");
+            System.out.println("Enter your character name");
+            String characterName = userInput.nextLine();
+            System.out.println("Your character name is : " + characterName);
+            Wizard wizard = new Wizard(characterName);
+            System.out.println(wizard.toString());
+            return wizard;
         }
-
-        System.out.println("Enter your character name");
-        String characterName = userInput.nextLine();
-        System.out.println("Your character name is : " + characterName);
-
-        Character character = new Character(characterName, characterType);
-        System.out.println(character.toString());
-        return character;
     }
 
     // montrer le personnage
@@ -50,7 +56,6 @@ public class Menu {
     // modifier le personnage
     public Character modifyCharacter(Character character) {
         character.setName(userInput.nextLine());
-        character.setType(userInput.nextLine());
         return character;
     }
 

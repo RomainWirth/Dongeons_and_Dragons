@@ -24,4 +24,15 @@ public class Wizard extends Character{
         random = new Random();
         this.strength = random.nextInt(15) + 8;
     }
+
+    @Override
+    public String toString() {
+        return "Wizard {" +
+                "\n name = '" + name + '\'' +
+                ",\n healthPoints = " + healthPoints +
+                ",\n strength = " + strength +
+                ",\n attackEquipment = " + attackEquipment +
+                ",\n defenseEquipment = " + defenseEquipment +
+                '}';
+    }
 }

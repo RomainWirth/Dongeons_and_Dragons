@@ -17,7 +17,7 @@ public abstract class DefenseEquipment {
 
     @Override
     public String toString() {
-        return "Defense Equipment {\n" +
+        return this.getClass().getSimpleName() + " {\n" +
                 " defense level = " + defenseLevel +
                 '}';
     }
