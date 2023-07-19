@@ -5,8 +5,8 @@ public class FireBall extends Spell {
 
     @Override
     public String toString() {
-        return "FireBall {\n" +
-                " attackLevel = " + attackLevel +
+        return "Fire Ball {\n" +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

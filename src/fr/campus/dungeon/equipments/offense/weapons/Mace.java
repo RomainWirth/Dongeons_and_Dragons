@@ -6,7 +6,7 @@ public class Mace extends Weapon {
     @Override
     public String toString() {
         return "Mace {\n" +
-                " attackLevel = " + attackLevel +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

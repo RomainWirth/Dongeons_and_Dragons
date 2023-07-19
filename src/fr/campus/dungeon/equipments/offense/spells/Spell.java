@@ -8,7 +8,7 @@ public abstract class Spell extends AttackEquipment {
     @Override
     public String toString() {
         return "Spell {\n" +
-                " attackLevel = " + attackLevel +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

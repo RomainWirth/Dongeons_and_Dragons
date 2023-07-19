@@ -5,8 +5,8 @@ public class KingdomShield extends Shield{
 
     @Override
     public String toString() {
-        return "KingdomShield {\n" +
-                " defenseLevel = " + defenseLevel +
+        return "Kingdom Shield {\n" +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }

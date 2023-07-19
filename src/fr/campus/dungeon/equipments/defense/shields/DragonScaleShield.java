@@ -5,8 +5,8 @@ public class DragonScaleShield extends Shield {
 
     @Override
     public String toString() {
-        return "DragonScaleShield {\n" +
-                " defenseLevel = " + defenseLevel +
+        return "Dragon Scale Shield {\n" +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }

@@ -1,11 +1,11 @@
 package fr.campus.dungeon.equipments.defense.magicRobes;
 
-public class ApprenticeRobe extends Robe {
-    public ApprenticeRobe(){super(2);}
+public class ArchmageRobe extends Robe{
+    public ArchmageRobe(){super(9);}
 
     @Override
     public String toString() {
-        return "Apprentice Robe {\n" +
+        return "Archmage Robe {\n" +
                 " defense level = " + defenseLevel +
                 '}';
     }

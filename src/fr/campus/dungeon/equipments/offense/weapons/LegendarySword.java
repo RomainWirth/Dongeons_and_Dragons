@@ -5,8 +5,8 @@ public class LegendarySword extends Weapon {
 
     @Override
     public String toString() {
-        return "LegendarySword {\n" +
-                " attackLevel = " + attackLevel +
+        return "Legendary Sword {\n" +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

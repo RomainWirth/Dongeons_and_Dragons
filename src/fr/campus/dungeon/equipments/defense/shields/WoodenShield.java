@@ -5,8 +5,8 @@ public class WoodenShield extends Shield {
 
     @Override
     public String toString() {
-        return "WoodenShield {\n" +
-                " defenseLevel = " + defenseLevel +
+        return "Wooden Shield {\n" +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }

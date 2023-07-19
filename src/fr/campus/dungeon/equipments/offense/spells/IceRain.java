@@ -5,8 +5,8 @@ public class IceRain extends Spell {
 
     @Override
     public String toString() {
-        return "IceRain {\n" +
-                " attackLevel = " + attackLevel +
+        return "Ice Rain {\n" +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

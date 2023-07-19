@@ -5,8 +5,8 @@ public class LegendaryShield extends Shield {
 
     @Override
     public String toString() {
-        return "LegendaryShield {\n" +
-                " defenseLevel = " + defenseLevel +
+        return "Legendary Shield {\n" +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }

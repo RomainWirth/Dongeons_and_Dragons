@@ -6,7 +6,7 @@ public class Axe extends Weapon{
     @Override
     public String toString() {
         return "Axe {\n" +
-                " attackLevel = " + attackLevel +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

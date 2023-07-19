@@ -8,7 +8,7 @@ public abstract class Weapon extends AttackEquipment {
     @Override
     public String toString() {
         return "Weapon {\n" +
-                " attackLevel = " + attackLevel +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

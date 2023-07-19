@@ -8,7 +8,7 @@ public abstract class Potion extends DefenseEquipment {
     @Override
     public String toString() {
         return "Potion {\n" +
-                " defenseLevel = " + defenseLevel +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }

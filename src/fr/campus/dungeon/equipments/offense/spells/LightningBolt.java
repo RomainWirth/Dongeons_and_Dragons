@@ -5,8 +5,8 @@ public class LightningBolt extends Spell {
 
     @Override
     public String toString() {
-        return "LightningBolt {\n" +
-                " attackLevel = " + attackLevel +
+        return "Lightning Bolt {\n" +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

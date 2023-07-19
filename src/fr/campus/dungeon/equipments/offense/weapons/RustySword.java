@@ -6,7 +6,7 @@ public class RustySword extends Weapon{
     @Override
     public String toString() {
         return "Rusty Sword {\n" +
-                " attackLevel = " + attackLevel +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

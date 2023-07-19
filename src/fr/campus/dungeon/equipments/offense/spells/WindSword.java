@@ -5,8 +5,8 @@ public class WindSword extends Spell {
 
     @Override
     public String toString() {
-        return "WindSword {\n" +
-                " attackLevel = " + attackLevel +
+        return "Wind Sword {\n" +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

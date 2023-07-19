@@ -6,7 +6,7 @@ public class LargeHealingPotion extends Potion{
     @Override
     public String toString() {
         return "Large Healing Potion {\n" +
-                " defense Level = " + defenseLevel +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }

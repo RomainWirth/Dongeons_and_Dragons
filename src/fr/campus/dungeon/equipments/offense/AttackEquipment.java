@@ -18,8 +18,8 @@ public abstract class AttackEquipment {
 
     @Override
     public String toString() {
-        return "{\n" +
-                ",\n attackLevel = " + attackLevel +
+        return "Attack Equipment {\n" +
+                ",\n attack level = " + attackLevel +
                 '}';
     }
 }

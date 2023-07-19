@@ -8,7 +8,7 @@ public class ShortSword extends Weapon {
     @Override
     public String toString() {
         return "Short Sword {\n" +
-                " attackLevel = " + attackLevel +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

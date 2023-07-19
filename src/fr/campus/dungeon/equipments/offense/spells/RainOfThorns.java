@@ -5,8 +5,8 @@ public class RainOfThorns extends Spell {
 
     @Override
     public String toString() {
-        return "RainOfThorns {\n" +
-                " attackLevel = " + attackLevel +
+        return "Rain Of Thorns {\n" +
+                " attack level = " + attackLevel +
                 '}';
     }
 }

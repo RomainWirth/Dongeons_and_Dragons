@@ -5,8 +5,8 @@ public class NordicShield extends Shield {
 
     @Override
     public String toString() {
-        return "NordicShield {\n" +
-                " defenseLevel = " + defenseLevel +
+        return "Nordic Shield {\n" +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }

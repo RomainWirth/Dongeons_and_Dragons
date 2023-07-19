@@ -8,7 +8,7 @@ public abstract class Shield extends DefenseEquipment {
     @Override
     public String toString() {
         return "Shield {\n" +
-                " defenseLevel = " + defenseLevel +
+                " defense level = " + defenseLevel +
                 '}';
     }
 }
