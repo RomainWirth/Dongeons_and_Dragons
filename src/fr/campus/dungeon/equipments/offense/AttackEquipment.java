@@ -18,7 +18,7 @@ public abstract class AttackEquipment {
 
     @Override
     public String toString() {
-        return "Attack Equipment {\n" +
+        return this.getClass().getSimpleName() +
                 ",\n attack level = " + attackLevel +
                 '}';
     }
