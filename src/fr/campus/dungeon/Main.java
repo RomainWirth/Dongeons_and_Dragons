@@ -1,10 +1,13 @@
 package fr.campus.dungeon;
 
+import fr.campus.dungeon.characters.Sorcerer;
 import fr.campus.dungeon.engine.Game;
 import fr.campus.dungeon.engine.Menu;
 
 public class Main {
     public static void main(String[] args) {
+        Sorcerer sorcerer = new Sorcerer("Sorcier");
+        System.out.println(sorcerer);
         // création d'une nouvelle partie
         Menu menu = new Menu();
         String userMainChoice = menu.displayMainMenu();

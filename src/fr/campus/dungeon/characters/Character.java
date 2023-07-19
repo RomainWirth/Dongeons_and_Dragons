@@ -3,12 +3,17 @@ package fr.campus.dungeon.characters;
 import fr.campus.dungeon.equipments.offense.AttackEquipment;
 import fr.campus.dungeon.equipments.defense.DefenseEquipment;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public abstract class Character {
     protected String name;
     protected int healthPoints;
     protected int strength;
     protected AttackEquipment attackEquipment;
     protected DefenseEquipment defenseEquipment;
+
+    protected ArrayList<AttackEquipment> attackList = new ArrayList<AttackEquipment>();
 
     public Character() {
     }
@@ -17,6 +22,7 @@ public abstract class Character {
         this.name = name;
         defineHealthPoints();
         defineStrength();
+        defineAttackEquipment();
     }
 
     // constructeur de la classe personnage
@@ -51,6 +57,12 @@ public abstract class Character {
 
     public abstract void defineHealthPoints();
     public abstract void defineStrength();
+
+    public void defineAttackEquipment() {
+        Random random = new Random();
+        int randomNumber = random.nextInt(attackList.size());
+        this.attackEquipment = attackList.get(randomNumber);
+    }
 
     @Override
     public String toString() {

@@ -54,7 +54,9 @@ public class Game {
 //                        throw new CharacterOutOfBoundsException();
                     }
                     System.out.println("New position : " + this.characterPosition);
-
+                    if (this.characterPosition == 64) {
+                        System.out.println("Game Over, you won!");
+                    }
                 } else if (userChoice.equals("2")) {
                     // montrer le personnage
                     menu.displayCharacter(myCharacter);

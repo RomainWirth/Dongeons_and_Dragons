@@ -1,11 +1,12 @@
-package fr.campus.dungeon.characters;
+package fr.campus.dungeon.characters.heros;
 
 import java.util.Random;
 
+import fr.campus.dungeon.characters.Character;
 import fr.campus.dungeon.equipments.offense.spells.RainOfThorns;
 import fr.campus.dungeon.equipments.defense.magicRobes.ApprenticeRobe;
 
-public class Wizard extends Character{
+public class Wizard extends Character {
     private Random random;
 
     // Constructeurs

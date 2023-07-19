@@ -1,9 +1,8 @@
 package fr.campus.dungeon.engine;
 
 import fr.campus.dungeon.characters.Character;
-import fr.campus.dungeon.characters.Warrior;
-import fr.campus.dungeon.characters.Wizard;
-import fr.campus.dungeon.boards.BoardGame;
+import fr.campus.dungeon.characters.heros.Warrior;
+import fr.campus.dungeon.characters.heros.Wizard;
 
 import java.util.Scanner;
 
