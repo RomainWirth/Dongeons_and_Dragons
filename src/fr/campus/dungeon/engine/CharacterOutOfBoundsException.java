@@ -1,4 +1,4 @@
-package fr.campus.dungeon;
+package fr.campus.dungeon.engine;
 
 public class CharacterOutOfBoundsException extends Exception {
     public CharacterOutOfBoundsException() {

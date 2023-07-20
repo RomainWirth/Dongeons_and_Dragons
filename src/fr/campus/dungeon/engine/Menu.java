@@ -25,7 +25,6 @@ public class Menu {
 
     // Créer un personnage
     public Character createCharacter() {
-
         System.out.println("Enter character type :\n Warrior\n or\n Wizard");
         String characterType = userInput.nextLine();
         if (characterType.equals("Warrior")){
@@ -66,8 +65,6 @@ public class Menu {
     // Quitter la partie
     public String gameOver() {
         System.out.println("1 - Quit Game / 2 - New Game");
-        // Start new game ?
-        // si oui = display Main menu, si non = fin
         return userInput.nextLine();
     }
 }

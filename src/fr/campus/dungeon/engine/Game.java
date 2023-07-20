@@ -1,6 +1,5 @@
 package fr.campus.dungeon.engine;
 
-import fr.campus.dungeon.CharacterOutOfBoundsException;
 import fr.campus.dungeon.boards.BoardGame;
 import fr.campus.dungeon.characters.Character;
 import fr.campus.dungeon.boards.Dice;
@@ -15,7 +14,6 @@ public class Game {
         this.menu = menu;
         addCharacter();
         addBoard();
-        // quit Game
         playGame();
     }
 
@@ -24,7 +22,6 @@ public class Game {
     }
 
     public void showCharacter() {
-        // appelé à n'importe quel moment du jeu
         menu.displayCharacter(this.myCharacter);
     }
     public void updateCharacter() {
@@ -38,10 +35,11 @@ public class Game {
     }
 
     public void playGame() {
+        this.board.generateBoard(this.myCharacter.getClass().getSimpleName());
         System.out.println("Start game");
         this.characterPosition = 0;
         System.out.println(this.characterPosition);
-        int length = this.board.getBoard().length;
+        int length = this.board.getBoard().size();
 //        try {
             while (this.characterPosition < length) {
                 String userChoice = menu.displayGameMenu();
