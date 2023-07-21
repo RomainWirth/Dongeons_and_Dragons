@@ -6,8 +6,8 @@ import fr.campus.dungeon.equipments.offense.weapons.RustySword;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Scaven extends Villain {
-    public Scaven(String name) {
+public class Skaven extends Villain {
+    public Skaven(String name) {
         super(name);
     }
     @Override

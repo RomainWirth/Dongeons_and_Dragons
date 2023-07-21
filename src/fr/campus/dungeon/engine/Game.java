@@ -31,7 +31,7 @@ public class Game {
     public void addBoard() {
         // création du plateau de jeu
         menu.initBoard();
-        this.board = new BoardGame();
+        this.board = new BoardGame(64);
     }
 
     public void playGame() {

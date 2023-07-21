@@ -46,7 +46,6 @@ import fr.campus.dungeon.equipments.careItems.LargeHealingPotion;
 import java.util.Random;
 
 public class LootBox {
-    protected Equipment equipment;
     protected AttackEquipment attackItem;
     protected DefenseEquipment defenseItem;
     protected Potion careItem;
@@ -55,6 +54,8 @@ public class LootBox {
 
     // Constructeur
     public LootBox(String className, int position){
+        this.className = className;
+        this.position = position;
         this.attackItem = generateRandomAttackItem();
         this.defenseItem = generateRandomDefenseItem();
         this.careItem = generateRandomCareItem();
@@ -68,39 +69,39 @@ public class LootBox {
         if (className.equals("Warrior")) {
             if (position <= 20) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new RustySword();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new Mace();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new ShortSword();
-                        break;
+                    }
                 }
             } else if (position > 20 && position <= 40) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new Mace();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new ShortSword();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new Axe();
-                        break;
+                    }
                 }
             } else if (position > 40 && position <= 60) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new ShortSword();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new Axe();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new LegendarySword();
-                        break;
+                    }
                 }
             } else if (position == 61 || position == 62) {
                 return new LegendarySword();
@@ -108,44 +109,45 @@ public class LootBox {
         } else { // Wizard
             if (position <= 20) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new RainOfThorns();
-                    break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new LightningBolt();
-                    break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new FireBall();
-                    break;
+                    }
                 }
             } else if (position > 20 && position <= 40) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new LightningBolt();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new FireBall();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new IceRain();
-                        break;
+                    }
                 }
             } else if (position > 40 && position <= 60) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new FireBall();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new IceRain();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new WindSword();
-                        break;
+                    }
                 }
             } else if (position == 61 || position == 62) {
                 return new WindSword();
             }
         }
+        return null;
     }
 
     public DefenseEquipment generateRandomDefenseItem(){
@@ -154,39 +156,39 @@ public class LootBox {
         if (className.equals("Warrior")) {
             if (position <= 20) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new WoodenShield();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new NordicShield();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new KingdomShield();
-                        break;
+                    }
                 }
             } else if (position > 20 && position <= 40) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new NordicShield();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new KingdomShield();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new LegendaryShield();
-                        break;
+                    }
                 }
             } else if (position > 40 && position <= 60) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new KingdomShield();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new LegendaryShield();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new DragonScaleShield();
-                        break;
+                    }
                 }
             } else if (position == 61 || position == 62) {
                 return new DragonScaleShield();
@@ -194,44 +196,45 @@ public class LootBox {
         } else { // Wizard
             if (position <= 20) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new ApprenticeRobe();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new NoviceRobe();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new MageRobe();
-                        break;
+                    }
                 }
             } else if (position > 20 && position <= 40) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new NoviceRobe();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new MageRobe();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new MasterRobe();
-                        break;
+                    }
                 }
             } else if (position > 40 && position <= 60) {
                 switch (randomNumber) {
-                    case 1:
+                    case 1 -> {
                         return new MageRobe();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         return new MasterRobe();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         return new ArchmageRobe();
-                        break;
+                    }
                 }
             } else if (position == 61 || position == 62) {
                 return new ArchmageRobe();
             }
         }
+        return null;
     }
 
     public Potion generateRandomCareItem(){
@@ -239,33 +242,34 @@ public class LootBox {
         int randomNumber = random.nextInt(3) + 1;
         if (position <= 20) {
             switch (randomNumber) {
-                case 1, 2:
+                case 1, 2 -> {
                     return new StandardHealingPotion();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     return new MediumHealingPotion();
-                    break;
+                }
             }
         } else if (position > 20 && position <= 40) {
             switch (randomNumber) {
-                case 1:
+                case 1 -> {
                     return new StandardHealingPotion();
-                    break;
-                case 2, 3:
+                }
+                case 2, 3 -> {
                     return new MediumHealingPotion();
-                    break;
+                }
             }
         } else if (position > 40 && position <= 60) {
             switch (randomNumber) {
-                case 1:
+                case 1 -> {
                     return new MediumHealingPotion();
-                    break;
-                case 2, 3:
+                }
+                case 2, 3 -> {
                     return new LargeHealingPotion();
-                    break;
+                }
             }
         } else if (position == 61 || position == 62) {
             return new LargeHealingPotion();
         }
+        return null;
     }
 }
