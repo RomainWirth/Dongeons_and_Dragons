@@ -17,5 +17,4 @@ public class heroDB {
             e.printStackTrace();
         }
     }
-    String query = "SELECT * FROM hero";
 }
