@@ -3,6 +3,7 @@ package fr.campus.dungeon.engine;
 import fr.campus.dungeon.boards.BoardGame;
 import fr.campus.dungeon.characters.Character;
 import fr.campus.dungeon.boards.Dice;
+import fr.campus.dungeon.db.HeroDB;
 
 public class Game {
     Character myCharacter;
@@ -13,6 +14,7 @@ public class Game {
     public Game(Menu menu) {
         this.menu = menu;
         addCharacter();
+        HeroDB.newHero(myCharacter);
         addBoard();
         playGame();
     }
@@ -51,6 +53,7 @@ public class Game {
                         this.characterPosition = length;
 //                        throw new CharacterOutOfBoundsException();
                     }
+
                     System.out.println("New position : " + this.characterPosition);
                     if (this.characterPosition == 64) {
                         System.out.println("Game Over, you won!");

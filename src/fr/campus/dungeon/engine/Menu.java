@@ -53,7 +53,6 @@ public class Menu {
 
     // modifier le personnage
     public Character modifyCharacter(Character character) {
-        character.setName(userInput.nextLine());
         return character;
     }
 
