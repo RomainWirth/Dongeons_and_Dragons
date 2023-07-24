@@ -16,3 +16,7 @@ CREATE TABLE hero (
     offensive_equipment VARCHAR(250),
     defensive_equipment VARCHAR(250)
 );
+
+
+# Test
+INSERT INTO hero VALUES (1, 'Warrior', 'Toto', 10, 10, 'LegendarySword', 'DragonScaleShield');

@@ -42,10 +42,7 @@ public abstract class Character {
         return name;
     }
 
-    public void setName(String name) {
-        System.out.println("Modify you name");
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 
     public int getHealthPoints() {
         return healthPoints;
@@ -58,6 +55,22 @@ public abstract class Character {
     }
 
     public void setStrength(int strength) {this.strength = strength;}
+
+    public AttackEquipment getAttackEquipment() {
+        return attackEquipment;
+    }
+
+    public void setAttackEquipment(AttackEquipment attackEquipment) {
+        this.attackEquipment = attackEquipment;
+    }
+
+    public DefenseEquipment getDefenseEquipment() {
+        return defenseEquipment;
+    }
+
+    public void setDefenseEquipment(DefenseEquipment defenseEquipment) {
+        this.defenseEquipment = defenseEquipment;
+    }
 
     public abstract void defineHealthPoints();
     public abstract void defineStrength();
