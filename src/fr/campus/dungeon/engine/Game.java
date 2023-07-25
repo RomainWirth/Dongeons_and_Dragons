@@ -32,9 +32,6 @@ public class Game {
     public void showCharacter() {
         menu.displayCharacter(this.myCharacter);
     }
-    public void updateCharacter() {
-        // appelé
-    }
 
     public void addBoard() {
         // création du plateau de jeu
@@ -46,17 +43,17 @@ public class Game {
         this.board.generateBoard(this.myCharacter.getClass().getSimpleName());
         System.out.println("Start game");
         this.characterPosition = 0;
-        System.out.println(this.characterPosition);
+        System.out.println("You enter the donjon on case " + (this.characterPosition + 1));
         int length = this.board.getBoard().size();
 //        try {
-            while (this.characterPosition < length) {
+            while (this.characterPosition < length - 1) {
                 String userChoice = menu.displayGameMenu();
                 if (userChoice.equals("1")) {
                     int roll = Dice.roll();
                     System.out.println("you rolled : " + roll);
                     this.characterPosition = this.characterPosition + roll;
-                    if (this.characterPosition > length) {
-                        this.characterPosition = length;
+                    if (this.characterPosition > length - 1) {
+                        this.characterPosition = length - 1;
 //                        throw new CharacterOutOfBoundsException();
                     }
                     // fonction event

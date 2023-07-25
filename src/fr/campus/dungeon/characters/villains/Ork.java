@@ -1,5 +1,6 @@
 package fr.campus.dungeon.characters.villains;
 
+import fr.campus.dungeon.equipments.defense.NoDefenseEquipment;
 import fr.campus.dungeon.equipments.offense.weapons.Mace;
 import fr.campus.dungeon.equipments.offense.weapons.ShortSword;
 
@@ -23,7 +24,9 @@ public class Ork extends Villain {
 
     @Override
     public void defineDefenseEquipment() {
-        this.defenseList = new ArrayList<>(List.of());
+        this.defenseList = new ArrayList<>(List.of(
+                new NoDefenseEquipment()
+        ));
         super.defineDefenseEquipment();
     }
 

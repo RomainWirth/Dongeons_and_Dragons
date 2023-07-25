@@ -1,5 +1,6 @@
 package fr.campus.dungeon.characters.villains;
 
+import fr.campus.dungeon.equipments.defense.NoDefenseEquipment;
 import fr.campus.dungeon.equipments.offense.weapons.RustySword;
 import fr.campus.dungeon.equipments.offense.weapons.Mace;
 
@@ -22,7 +23,9 @@ public class Gobelin extends Villain {
 
     @Override
     public void defineDefenseEquipment() {
-        this.defenseList = new ArrayList<>(List.of());
+        this.defenseList = new ArrayList<>(List.of(
+                new NoDefenseEquipment()
+        ));
         super.defineDefenseEquipment();
     }
 

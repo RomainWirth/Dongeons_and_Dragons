@@ -1,17 +1,10 @@
 package fr.campus.dungeon;
 
-import fr.campus.dungeon.characters.heros.Hero;
-import fr.campus.dungeon.db.ConnectDB;
-import fr.campus.dungeon.db.HeroDB;
 import fr.campus.dungeon.engine.Game;
 import fr.campus.dungeon.engine.Menu;
 
 public class Main {
     public static void main(String[] args) {
-//        ConnectDB connexion = new ConnectDB();
-//        connexion.getCon();
-//        Hero hero = HeroDB.showHero();
-//        System.out.println(hero);
         // création d'une nouvelle partie
         Menu menu = new Menu();
         String userMainChoice = menu.displayMainMenu();
