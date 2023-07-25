@@ -9,8 +9,10 @@ import java.util.Random;
 public abstract class Character {
     protected String name;
     protected int healthPoints;
-    protected int strength; // min et max : définit la puissance de frappe min et max selon lancé de dés : si force attaquand > agilité defenseur = dégâts sinon rien
-    // stamina = min et max : définit le niveau de défense du perso selon lancé de dé
+    protected int minStrength;
+    protected int maxStrength;
+    protected int minStamina;
+    protected int maxStamina;
     protected AttackEquipment attackEquipment;
     protected DefenseEquipment defenseEquipment;
     // bag = array taille 3
@@ -24,16 +26,30 @@ public abstract class Character {
     public Character(String name) {
         this.name = name;
         defineHealthPoints();
-        defineStrength();
+        defineMinStrength();
+        defineMaxStrength();
+        defineMinStamina();
+        defineMaxStamina();
         defineAttackEquipment();
         defineDefenseEquipment();
     }
 
     // constructeur de la classe personnage
-    public Character(String name, int healthPoints, int strength, AttackEquipment attackEquipment, DefenseEquipment defenseEquipment) {
+    public Character(
+            String name,
+            int healthPoints,
+            int minStrength,
+            int maxStrength,
+            int minStamina,
+            int maxStamina,
+            AttackEquipment attackEquipment,
+            DefenseEquipment defenseEquipment) {
         this.name = name;
         this.healthPoints = healthPoints;
-        this.strength = strength;
+        this.minStrength = minStrength;
+        this.maxStrength = maxStrength;
+        this.minStamina = minStamina;
+        this.maxStamina = maxStamina;
         this.attackEquipment = attackEquipment;
         this.defenseEquipment = defenseEquipment;
     }
@@ -52,11 +68,53 @@ public abstract class Character {
         this.healthPoints = healthPoints;
     }
 
-    public int getStrength() {
-        return strength;
+    public int getMinStrength() {
+        return minStrength;
     }
 
-    public void setStrength(int strength) {this.strength = strength;}
+    public void setMinStrength(int minStrength) {
+        this.minStrength = minStrength;
+    }
+
+    public int getMaxStrength() {
+        return maxStrength;
+    }
+
+    public void setMaxStrength(int maxStrength) {
+        this.maxStrength = maxStrength;
+    }
+
+    public int getMinStamina() {
+        return minStamina;
+    }
+
+    public void setMinStamina(int minStamina) {
+        this.minStamina = minStamina;
+    }
+
+    public int getMaxStamina() {
+        return maxStamina;
+    }
+
+    public void setMaxStamina(int maxStamina) {
+        this.maxStamina = maxStamina;
+    }
+
+    public ArrayList<AttackEquipment> getAttackList() {
+        return attackList;
+    }
+
+    public void setAttackList(ArrayList<AttackEquipment> attackList) {
+        this.attackList = attackList;
+    }
+
+    public ArrayList<DefenseEquipment> getDefenseList() {
+        return defenseList;
+    }
+
+    public void setDefenseList(ArrayList<DefenseEquipment> defenseList) {
+        this.defenseList = defenseList;
+    }
 
     public AttackEquipment getAttackEquipment() {
         return attackEquipment;
@@ -75,7 +133,10 @@ public abstract class Character {
     }
 
     public abstract void defineHealthPoints();
-    public abstract void defineStrength();
+    public abstract void defineMinStrength();
+    public abstract void defineMaxStrength();
+    public abstract void defineMinStamina();
+    public abstract void defineMaxStamina();
 
     public void defineAttackEquipment() {
         if (attackList.size() > 0) {
@@ -98,7 +159,10 @@ public abstract class Character {
         return "Character { \n" +
                 " name = '" + name + '\'' +
                 ",\n healthPoints = " + healthPoints +
-                ",\n strengh = " + strength +
+                ",\n min strengh = " + minStrength +
+                ",\n max strengh = " + maxStrength +
+                ",\n min stamina = " + minStamina +
+                ",\n min stamina = " + minStamina +
                 ",\n attackEquipment = " + attackEquipment +
                 ",\n defenseEquipment = " + defenseEquipment +
                 '}';

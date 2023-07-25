@@ -35,7 +35,17 @@ public class Sorcerer extends Villain {
         ));
         super.defineDefenseEquipment();
     }
-
     public void defineHealthPoints() {this.healthPoints = 9;}
-    public void defineStrength() {this.strength = 3;}
+    public void defineMinStrength() {
+        this.minStrength = 2;
+    }
+    public void defineMaxStrength() {
+        this.maxStrength = 6;
+    }
+    public void defineMinStamina() {
+        this.minStamina = 2;
+    }
+    public void defineMaxStamina() {
+        this.maxStamina = 8;
+    }
 }

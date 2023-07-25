@@ -28,9 +28,18 @@ public class Dragon extends Villain {
     }
 
     public void defineHealthPoints() {
-        this.healthPoints = 50;
+        this.healthPoints = 20;
     }
-    public void defineStrength() {
-        this.strength = 6;
+    public void defineMinStrength() {
+        this.minStrength = 5;
+    }
+    public void defineMaxStrength() {
+        this.maxStrength = 15;
+    }
+    public void defineMinStamina() {
+        this.minStamina = 12;
+    }
+    public void defineMaxStamina() {
+        this.maxStamina = 20;
     }
 }

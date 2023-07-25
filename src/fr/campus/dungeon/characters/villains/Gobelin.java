@@ -32,7 +32,16 @@ public class Gobelin extends Villain {
     public void defineHealthPoints() {
         this.healthPoints = 6;
     }
-    public void defineStrength() {
-        this.strength = 1;
+    public void defineMinStrength() {
+        this.minStrength = 3;
+    }
+    public void defineMaxStrength() {
+        this.maxStrength = 5;
+    }
+    public void defineMinStamina() {
+        this.minStamina = 3;
+    }
+    public void defineMaxStamina() {
+        this.maxStamina = 7;
     }
 }

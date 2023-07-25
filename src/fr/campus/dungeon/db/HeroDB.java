@@ -19,22 +19,25 @@ public class HeroDB {
 
 //        ResultSet resultSet = null;
         String preparedQuery = "INSERT INTO hero " +
-                " (hero_class, name, health_points, strength, offensive_type, offensive_equipment,defensive_type, defensive_equipment) " +
-                " VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                " (hero_class, name, health_points, min_strength, max_strength, min_stamina, max_stamina, offensive_type, offensive_equipment,defensive_type, defensive_equipment) " +
+                " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStatement = con.prepareStatement(preparedQuery);
 
             preparedStatement.setString(1, myCharacter.getClass().getSimpleName());
             preparedStatement.setString(2, myCharacter.getName());
             preparedStatement.setInt(3, myCharacter.getHealthPoints());
-            preparedStatement.setInt(4, myCharacter.getStrength());
-            preparedStatement.setString(5, myCharacter.getAttackEquipment().getClass().getName());
+            preparedStatement.setInt(4, myCharacter.getMinStrength());
+            preparedStatement.setInt(5, myCharacter.getMaxStrength());
+            preparedStatement.setInt(6, myCharacter.getMinStamina());
+            preparedStatement.setInt(7, myCharacter.getMaxStamina());
+            preparedStatement.setString(8, myCharacter.getAttackEquipment().getClass().getName());
             Gson gson = new Gson();
             String jsonAttackEquipment = gson.toJson(myCharacter.getAttackEquipment());
-            preparedStatement.setString(6, jsonAttackEquipment);
-            preparedStatement.setString(7, myCharacter.getDefenseEquipment().getClass().getName());
+            preparedStatement.setString(9, jsonAttackEquipment);
+            preparedStatement.setString(10, myCharacter.getDefenseEquipment().getClass().getName());
             String jsonDefenseEquipment = gson.toJson(myCharacter.getDefenseEquipment());
-            preparedStatement.setString(8, jsonDefenseEquipment);
+            preparedStatement.setString(11, jsonDefenseEquipment);
 
             int results = preparedStatement.executeUpdate();
 
@@ -94,7 +97,10 @@ public class HeroDB {
                 String name = results.getString("name");
                 String heroClass = results.getString("hero_class");
                 int healthPoints = results.getInt("health_points");
-                int strength = results.getInt("strength");
+                int minStrength = results.getInt("min_strength");
+                int maxStrength = results.getInt("max_strength");
+                int minStamina = results.getInt("min_stamina");
+                int maxStamina = results.getInt("min_stamina");
                 String offenseType = results.getString("offensive_type");
                 Gson gson = new Gson();
                 String jsonAttackEquipmentInString = results.getString("offensive_equipment");
@@ -109,7 +115,10 @@ public class HeroDB {
                     hero = new Wizard(name);
                 }
                 hero.setHealthPoints(healthPoints);
-                hero.setStrength(strength);
+                hero.setMinStrength(minStrength);
+                hero.setMaxStrength(maxStrength);
+                hero.setMinStamina(minStamina);
+                hero.setMaxStamina(maxStamina);
                 hero.setAttackEquipment(offensiveEquipment);
                 hero.setDefenseEquipment(defenseEquipment);
 

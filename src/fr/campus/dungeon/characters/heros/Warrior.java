@@ -37,9 +37,17 @@ public class Warrior extends Hero {
         this.healthPoints = random.nextInt(5) + 5;
         this.setMaxHealthPoints(this.healthPoints);
     }
-    public void defineStrength() {
-        Random random = new Random();
-        this.strength = random.nextInt(5) + 5;
+    public void defineMinStrength() {
+        this.minStrength = 5;
+    }
+    public void defineMaxStrength() {
+        this.maxStrength = 10;
+    }
+    public void defineMinStamina() {
+        this.minStamina = 5;
+    }
+    public void defineMaxStamina() {
+        this.maxStamina = 10;
     }
 
     @Override
@@ -47,7 +55,10 @@ public class Warrior extends Hero {
         return "Warrior {" +
                 "\n name = '" + name + '\'' +
                 ",\n healthPoints = " + healthPoints +
-                ",\n strength = " + strength +
+                ",\n min strengh = " + minStrength +
+                ",\n max strengh = " + maxStrength +
+                ",\n min stamina = " + minStamina +
+                ",\n max stamina = " + maxStamina +
                 ",\n attackEquipment = " + attackEquipment +
                 ",\n defenseEquipment = " + defenseEquipment +
                 '}';

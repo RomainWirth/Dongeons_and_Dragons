@@ -30,6 +30,11 @@ public class Menu {
         return userInput.nextLine();
     }
 
+    public String fightMenu() {
+        System.out.println("You start the fight : enter \"1\" - Roll the dice\n You choose to flee : enter \"2\" - Flee the fight");
+        return userInput.nextLine();
+    }
+
     public String displayLootMenu(Equipment equipment) {
         System.out.println("You found new equipment : " + equipment + "\n");
         System.out.println("Do you want to equip ? \n 1 - Yes \n 2 - No");

@@ -29,7 +29,16 @@ public class Skaven extends Villain {
     public void defineHealthPoints() {
         this.healthPoints = 4;
     }
-    public void defineStrength() {
-        this.strength = 1;
+    public void defineMinStrength() {
+        this.minStrength = 1;
+    }
+    public void defineMaxStrength() {
+        this.maxStrength = 4;
+    }
+    public void defineMinStamina() {
+        this.minStamina = 2;
+    }
+    public void defineMaxStamina() {
+        this.maxStamina = 5;
     }
 }
