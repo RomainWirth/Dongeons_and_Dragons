@@ -35,7 +35,7 @@ public class Wizard extends Hero {
     // Méthodes
     public void defineHealthPoints() {
         random = new Random();
-        this.healthPoints = random.nextInt(3) + 3;
+        this.healthPoints = random.nextInt(4) + 4;
         this.setMaxHealthPoints(this.healthPoints);
     }
     public void defineMinStrength() {

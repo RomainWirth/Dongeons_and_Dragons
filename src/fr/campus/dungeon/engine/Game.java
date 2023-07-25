@@ -97,6 +97,9 @@ public class Game {
                 choice = menu.displayFightMenu();
                 if (choice.equals("1")){
                     System.out.println("You stand your ground and face the enemy");
+                    // indiquer quel ennemi c'est ici
+                    String enemy = enemyCase.getEnemy().toString();
+                    System.out.println(enemy);
                     fight(enemyCase);
                 } else if (choice.equals("2")) {
                     System.out.println("You flee like a weakling");
@@ -224,7 +227,7 @@ public class Game {
                     } else {
                         System.out.println("Enemy roll is a success, enemy attack is at its maximum : " + enemyMaxStrength);
                         currentAttack = enemyMaxStrength + enemyAddupStrength;
-                        System.out.println("Your equipment add boost to your attack : " + currentAttack);
+                        System.out.println("It's equipment add boost to its attack : " + currentAttack);
                     }
                     System.out.println("You defend the attack and roll the Dice : ");
                     characterRoll = Dice.roll();
@@ -236,7 +239,7 @@ public class Game {
                     } else {
                         System.out.println("Roll is a success, your defense is at its maximum : " + characterMaxStamina);
                         currentDefense = characterMaxStamina + characterAddupDefense;
-                        System.out.println("Your equipment add boost to your attack : " + currentDefense);
+                        System.out.println("Your equipment add boost to your defense : " + currentDefense);
                     }
                     damage = currentAttack - currentDefense;
                     if (damage <= 0) {
@@ -249,6 +252,7 @@ public class Game {
                             System.out.println("************************************************************");
                             System.out.println("******************** GAME OVER YOU LOSE ********************");
                             System.out.println("************************************************************");
+                            return;
                         } else {
                             System.out.println("You took damage, but you're strong and it's your turn to strike back !");
                             System.out.println("************************************************************");

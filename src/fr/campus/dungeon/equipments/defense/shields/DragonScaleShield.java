@@ -1,5 +1,5 @@
 package fr.campus.dungeon.equipments.defense.shields;
 
 public class DragonScaleShield extends Shield {
-    public DragonScaleShield(){super(15);}
+    public DragonScaleShield(){super(10);}
 }

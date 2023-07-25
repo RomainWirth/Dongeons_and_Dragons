@@ -10,8 +10,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Sorcerer extends Villain {
-    // initialisation d'un tableau regroupant tous les équipements magiques d'attaque
-    // initialisation d'un tableau regroupant tous les équipements magiques de défense
 
     public Sorcerer(String name) {
         super(name);
@@ -35,17 +33,17 @@ public class Sorcerer extends Villain {
         ));
         super.defineDefenseEquipment();
     }
-    public void defineHealthPoints() {this.healthPoints = 9;}
+    public void defineHealthPoints() {this.healthPoints = 8;}
     public void defineMinStrength() {
-        this.minStrength = 2;
+        this.minStrength = 8;
     }
     public void defineMaxStrength() {
-        this.maxStrength = 6;
+        this.maxStrength = 10;
     }
     public void defineMinStamina() {
-        this.minStamina = 2;
+        this.minStamina = 1;
     }
     public void defineMaxStamina() {
-        this.maxStamina = 8;
+        this.maxStamina = 2;
     }
 }

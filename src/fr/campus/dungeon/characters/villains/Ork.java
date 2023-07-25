@@ -1,6 +1,7 @@
 package fr.campus.dungeon.characters.villains;
 
 import fr.campus.dungeon.equipments.defense.NoDefenseEquipment;
+import fr.campus.dungeon.equipments.offense.weapons.Axe;
 import fr.campus.dungeon.equipments.offense.weapons.Mace;
 import fr.campus.dungeon.equipments.offense.weapons.ShortSword;
 
@@ -17,7 +18,7 @@ public class Ork extends Villain {
     public void defineAttackEquipment() {
         this.attackList = new ArrayList<>(Arrays.asList(
                 new Mace(),
-                new ShortSword()
+                new Axe()
         ));
         super.defineAttackEquipment();
     }
@@ -31,13 +32,13 @@ public class Ork extends Villain {
     }
 
     public void defineHealthPoints() {
-        this.healthPoints = 7;
+        this.healthPoints = 15;
     }
     public void defineMinStrength() {
         this.minStrength = 5;
     }
     public void defineMaxStrength() {
-        this.maxStrength = 10;
+        this.maxStrength = 12;
     }
     public void defineMinStamina() {
         this.minStamina = 5;

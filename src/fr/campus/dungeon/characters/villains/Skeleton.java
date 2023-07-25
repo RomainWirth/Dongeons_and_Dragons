@@ -32,18 +32,18 @@ public class Skeleton extends Villain {
     }
 
     public void defineHealthPoints() {
-        this.healthPoints = 5;
+        this.healthPoints = 10;
     }
     public void defineMinStrength() {
-        this.minStrength = 1;
+        this.minStrength = 4;
     }
     public void defineMaxStrength() {
-        this.maxStrength = 4;
+        this.maxStrength = 10;
     }
     public void defineMinStamina() {
         this.minStamina = 1;
     }
     public void defineMaxStamina() {
-        this.maxStamina = 4;
+        this.maxStamina = 8;
     }
 }
