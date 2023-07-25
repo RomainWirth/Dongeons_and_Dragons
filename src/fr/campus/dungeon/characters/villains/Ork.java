@@ -24,7 +24,7 @@ public class Ork extends Villain {
     @Override
     public void defineDefenseEquipment() {
         this.defenseList = new ArrayList<>(List.of());
-        super.defineAttackEquipment();
+        super.defineDefenseEquipment();
     }
 
     public void defineHealthPoints() {

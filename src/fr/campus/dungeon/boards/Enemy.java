@@ -66,4 +66,20 @@ public class Enemy {
         }
         return null;
     }
+
+    public Villain getVillain() {
+        return villain;
+    }
+
+    public void setVillain(Villain villain) {
+        this.villain = villain;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 }

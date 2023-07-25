@@ -48,7 +48,9 @@ public abstract class Character {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {this.healthPoints = healthPoints;}
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints = healthPoints;
+    }
 
     public int getStrength() {
         return strength;

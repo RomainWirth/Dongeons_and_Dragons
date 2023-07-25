@@ -35,6 +35,7 @@ public class Warrior extends Hero {
     public void defineHealthPoints() {
         Random random = new Random();
         this.healthPoints = random.nextInt(5) + 5;
+        this.setMaxHealthPoints(this.healthPoints);
     }
     public void defineStrength() {
         Random random = new Random();

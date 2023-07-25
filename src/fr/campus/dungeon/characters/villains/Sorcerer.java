@@ -33,11 +33,9 @@ public class Sorcerer extends Villain {
                 new MageRobe(),
                 new MasterRobe()
         ));
-        super.defineAttackEquipment();
+        super.defineDefenseEquipment();
     }
 
-    public void defineHealthPoints() {
-        this.healthPoints = 9;
-    }
+    public void defineHealthPoints() {this.healthPoints = 9;}
     public void defineStrength() {this.strength = 3;}
 }

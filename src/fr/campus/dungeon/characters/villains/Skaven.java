@@ -23,7 +23,7 @@ public class Skaven extends Villain {
         this.defenseList = new ArrayList<>(List.of(
                 new WoodenShield()
         ));
-        super.defineAttackEquipment();
+        super.defineDefenseEquipment();
     }
 
     public void defineHealthPoints() {

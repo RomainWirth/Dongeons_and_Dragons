@@ -272,4 +272,44 @@ public class LootBox {
         }
         return null;
     }
+
+    public AttackEquipment getAttackItem() {
+        return attackItem;
+    }
+
+    public void setAttackItem(AttackEquipment attackItem) {
+        this.attackItem = attackItem;
+    }
+
+    public DefenseEquipment getDefenseItem() {
+        return defenseItem;
+    }
+
+    public void setDefenseItem(DefenseEquipment defenseItem) {
+        this.defenseItem = defenseItem;
+    }
+
+    public Potion getCareItem() {
+        return careItem;
+    }
+
+    public void setCareItem(Potion careItem) {
+        this.careItem = careItem;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 }

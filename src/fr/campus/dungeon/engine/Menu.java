@@ -1,8 +1,10 @@
 package fr.campus.dungeon.engine;
 
 import fr.campus.dungeon.characters.Character;
+import fr.campus.dungeon.characters.heros.Hero;
 import fr.campus.dungeon.characters.heros.Warrior;
 import fr.campus.dungeon.characters.heros.Wizard;
+import fr.campus.dungeon.equipments.Equipment;
 
 import java.util.Scanner;
 
@@ -23,8 +25,24 @@ public class Menu {
         return userInput.nextLine();
     }
 
+    public String displayFightMenu(){
+        System.out.println("You encounter an Enemy... what will you do ?\n 1 - fight! \n 2 - fly! you fool!");
+        return userInput.nextLine();
+    }
+
+    public String displayLootMenu(Equipment equipment) {
+        System.out.println("You found new equipment : " + equipment + "\n");
+        System.out.println("Do you want to equip ? \n 1 - Yes \n 2 - No");
+        String userChoice = userInput.nextLine();
+        while (!userChoice.equals("1") && !userChoice.equals("2")) {
+            System.out.println("Do you want to equip ? \n 1 - Yes \n 2 - No");
+            userChoice = userInput.nextLine();
+        }
+        return userChoice;
+    }
+
     // Créer un personnage
-    public Character createCharacter() {
+    public Hero createCharacter() {
         System.out.println("Enter character type :\n Warrior\n or\n Wizard");
         String characterType = userInput.nextLine();
         if (characterType.equals("Warrior")){
@@ -52,7 +70,7 @@ public class Menu {
     }
 
     // modifier le personnage
-    public Character modifyCharacter(Character character) {
+    public Hero modifyCharacter(Hero character) {
         return character;
     }
 
