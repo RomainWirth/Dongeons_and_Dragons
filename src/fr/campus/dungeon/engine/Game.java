@@ -11,6 +11,10 @@ import fr.campus.dungeon.equipments.careItems.Potion;
 import fr.campus.dungeon.equipments.defense.DefenseEquipment;
 import fr.campus.dungeon.equipments.offense.AttackEquipment;
 
+/**
+ * This class manage all the game comportment
+ *
+ */
 public class Game {
     Hero myCharacter;
     Menu menu;
@@ -38,6 +42,7 @@ public class Game {
         menu.initBoard();
         this.board = new BoardGame(64);
     }
+
 
     public void playGame() {
         this.board.generateBoard(this.myCharacter.getClass().getSimpleName());

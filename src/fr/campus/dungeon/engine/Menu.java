@@ -35,6 +35,11 @@ public class Menu {
         return userInput.nextLine();
     }
 
+    /**
+     * description
+     * @param equipment farmed on the case
+     * @return string representing the user choice to equip or not the equipment found on the case
+     */
     public String displayLootMenu(Equipment equipment) {
         System.out.println("You found new equipment : " + equipment + "\n");
         System.out.println("Do you want to equip ? \n 1 - Yes \n 2 - No");
