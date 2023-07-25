@@ -30,13 +30,18 @@ public class Menu {
         return userInput.nextLine();
     }
 
+    /**
+     * this method display a menu for the user to choose to fight or flee
+     * @return the choice of the user
+     */
     public String fightMenu() {
         System.out.println("You start the fight : enter \"1\" - Roll the dice\n You choose to flee : enter \"2\" - Flee the fight");
         return userInput.nextLine();
     }
 
     /**
-     * description
+     * the purpose of this method is to display a menu so the user can choose to equip or not the equipment found on the LootCase.
+     * It takes an object equipment as parameter and returns the choice of the user
      * @param equipment farmed on the case
      * @return string representing the user choice to equip or not the equipment found on the case
      */
